@@ -65,8 +65,8 @@ def parse_config(config_file):
 def extract_author_info(config):
     """Extract author information from the config file."""
     author_info = {
-        "name": config.get('name', ''),
-        "email": "",
+        "name": config.get('Tahira', ''),
+        "email": "tahirakazimi@vt.edu",
         "phone": "",
         "website": config.get('url', ''),
         "summary": "",
