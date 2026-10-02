@@ -392,6 +392,25 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 </style></head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<style>
+  .publications-list{margin-top:1.5em}
+  .pub-card{position:relative;padding:1.1em 1.3em 1.15em 1.4em;margin-bottom:1.1em;border:1px solid var(--global-border-color);border-left:4px solid var(--global-link-color);border-radius:10px;background:var(--global-bg-color);transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+  .pub-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.13);transform:translateY(-2px);border-left-color:var(--global-link-color-hover)}
+  .pub-venue{display:inline-block;font-size:.66em;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.3em .75em;border-radius:999px;margin-bottom:.55em;color:#fff;background:var(--global-base-color)}
+  .pub-venue--neurips{background:#6d48c9}
+  .pub-venue--cvpr{background:#2f7f93}
+  .pub-venue--workshop{background:#c2682d}
+  .pub-venue--ieee{background:#4a68b3}
+  .pub-title{margin:.1em 0 .35em;font-size:1.06em;line-height:1.35;font-weight:700;color:var(--global-text-color);border-bottom:none}
+  .pub-authors{margin:0;font-size:.9em;color:var(--global-text-color);opacity:.92}
+  .pub-authors strong{color:var(--global-link-color)}
+  .pub-links{margin-top:.75em;display:flex;flex-wrap:wrap;gap:.5em}
+  .pub-btn{display:inline-flex;align-items:center;gap:.4em;font-size:.74em;font-weight:700;padding:.46em .9em;border-radius:6px;text-decoration:none !important;color:#fff !important;background:var(--global-base-color);transition:transform .15s ease,filter .15s ease}
+  .pub-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .pub-btn--arxiv{background:#b31b1b}
+  .pub-btn--page{background:#2a9d6d}
+  .pub-btn--code{background:#333}
+</style>
 <body style="padding-top: 63px; margin-bottom: 191.125px;"> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <button class="hidden" count="0"><div class="navicon"></div></button><ul class="visible-links"><li class="masthead__menu-item masthead__menu-item--lg persist"><a href="https://TahiraKazimi.github.io/">Tahira Kazimi</a></li><li class="masthead__menu-item">
   <a href="./assets/TahiraKazimi_jan_23.pdf" target="_blank">CV</a>
 </li><li id="theme-toggle" class="masthead__menu-item persist tail"> <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a></li></ul><ul class="hidden-links hidden"></ul></nav></div></div></div><div id="main" role="main"><div class="sidebar sticky" style="padding-top: 63px;"><div itemscope="" itemtype="http://schema.org/Person"><div class="author__avatar"> <img src="assets/profile_2.jpg" class="author__avatar" alt="Tahira Kazimi"></div><div class="author__content"><h3 class="author__name">Tahira Kazimi</h3><p class="author__bio">Ph.D. Student</p></div><div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button><ul class="author__urls social-icons"> <!-- Font Awesome icons / Biographic information --><li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Blacksburg, VA</li><li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>Virginia Tech</li><!-- Font Awesome and Academicons icons / Academic websites --><li><a href="https://scholar.google.com/citations?user=wQVM3vcAAAAJ&hl=en"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li><!-- Font Awesome icons / Repositories and software development --> <!-- Font Awesome icons / Social media --><li><a href="https://www.linkedin.com/in/tahira-kazimi-b35811134/"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li></ul></div></div></div><article class="page" itemscope="" itemtype="http://schema.org/CreativeWork"><meta itemprop="headline" content="About Me"><div class="page__inner-wrap"><header><h1 class="page__title" itemprop="headline">About Me</h1></header><section class="page__content" itemprop="text"><p>
@@ -419,45 +438,55 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 </p>
   <h1 id="publications">Publications</h1>
 
-  <div class="list__item" style="margin-top: 20px;">
-  <article class="archive__item">
-    <h2 class="archive__item-title">Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization</h2>
-    <p><strong>Tahira Kazimi</strong>, Connor Dunlop, Pinar Yanardag</p>
-    <p><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
-    <a href="https://arxiv.org/abs/2511.20647" class="btn btn--info">arXiv</a>
-    <a href="https://diverse-video.github.io" class="btn btn--success">Project Page</a>
-  </article>
-</div>
+  <div class="publications-list">
 
-<div class="list__item">
-  <article class="archive__item">
-    <h2 class="archive__item-title">Explaining in Diffusion: Explaining a Classifier Through Hierarchical Semantics with Text-to-Image Diffusion Models</h2>
-    <p><strong>Tahira Kazimi</strong>, Ritika Allada, Pinar Yanardag</p>
-    <p><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</em></p>
-    <a href="https://arxiv.org/abs/2412.18604" class="btn btn--info">arXiv</a> 
-    <a href="https://explain-in-diffusion.github.io" class="btn btn--success">Project Page</a>
-  </article>
-</div>
+    <div class="pub-card">
+      <span class="pub-venue pub-venue--neurips">NeurIPS 2026</span>
+      <h2 class="pub-title">HiPhy: Hierarchical Alignment for Physically-Plausible Multi-Principle Video Generation</h2>
+      <p class="pub-authors"><strong>Tahira Kazimi</strong>, Shubhankar Borse, Munawar Hayat, Fatih Porikli, Pinar Yanardag</p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2610.02197" class="pub-btn pub-btn--arxiv"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>
+        <a href="https://hiphy-video.github.io/" class="pub-btn pub-btn--page"><i class="fa-solid fa-globe" aria-hidden="true"></i> Project Page</a>
+      </div>
+    </div>
 
+    <div class="pub-card">
+      <span class="pub-venue pub-venue--cvpr">CVPR 2026</span>
+      <h2 class="pub-title">Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization</h2>
+      <p class="pub-authors"><strong>Tahira Kazimi</strong>, Connor Dunlop, Pinar Yanardag</p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2511.20647" class="pub-btn pub-btn--arxiv"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>
+        <a href="https://diverse-video.github.io" class="pub-btn pub-btn--page"><i class="fa-solid fa-globe" aria-hidden="true"></i> Project Page</a>
+      </div>
+    </div>
 
-<div class="list__item" style="margin-top: 20px;">
-  <article class="archive__item">
-    <h2 class="archive__item-title">Audit & Repair: An Agentic Framework for Consistent Story Visualization in
-Text-to-Image Diffusion Models</h2>
-    <p>Kiymet Akdemir*, <strong>Tahira Kazimi*</strong>, Pinar Yanardag</p>
-    <p><em>ICCV'25 MMRAgI</em></p>
-    <a href="https://arxiv.org/abs/2506.18900" class="btn btn--info">arXiv</a>
-    <a href="https://auditandrepair.github.io" class="btn btn--success">Project Page</a>
-  </article>
-</div>
-<div class="list__item" style="margin-top: 20px;">
-  <article class="archive__item">
-    <h2 class="archive__item-title">Diverse Video Generation with Collaborative Agents</h2>
-    <p> <strong>Tahira Kazimi</strong>, Heather Yu, Zhiqiang Lao.</p>
-    <p><em>IEEE CAI 2026, ICCV'25 MMRAgI</em></p>
+    <div class="pub-card">
+      <span class="pub-venue pub-venue--cvpr">CVPR 2025</span>
+      <h2 class="pub-title">Explaining in Diffusion: Explaining a Classifier Through Hierarchical Semantics with Text-to-Image Diffusion Models</h2>
+      <p class="pub-authors"><strong>Tahira Kazimi</strong>, Ritika Allada, Pinar Yanardag</p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2412.18604" class="pub-btn pub-btn--arxiv"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>
+        <a href="https://explain-in-diffusion.github.io" class="pub-btn pub-btn--page"><i class="fa-solid fa-globe" aria-hidden="true"></i> Project Page</a>
+      </div>
+    </div>
 
-  </article>
-</div>
+    <div class="pub-card">
+      <span class="pub-venue pub-venue--workshop">ICCV'25 MMRAgI</span>
+      <h2 class="pub-title">Audit &amp; Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models</h2>
+      <p class="pub-authors">Kiymet Akdemir*, <strong>Tahira Kazimi*</strong>, Pinar Yanardag</p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2506.18900" class="pub-btn pub-btn--arxiv"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>
+        <a href="https://auditandrepair.github.io" class="pub-btn pub-btn--page"><i class="fa-solid fa-globe" aria-hidden="true"></i> Project Page</a>
+      </div>
+    </div>
+
+    <div class="pub-card">
+      <span class="pub-venue pub-venue--ieee">IEEE CAI 2026 &middot; ICCV'25 MMRAgI</span>
+      <h2 class="pub-title">Diverse Video Generation with Collaborative Agents</h2>
+      <p class="pub-authors"><strong>Tahira Kazimi</strong>, Heather Yu, Zhiqiang Lao</p>
+    </div>
+
+  </div>
   <h1 id="latest-news">Latest News</h1><p>[Sep 2026] My first-author paper on physically plausible video generation is accepted to NeurIPS 2026.</p><p>[April 2026] I will be joining Apple as Machine Learning intern at Media Intelligence Team </p><p>[Feb 2026] My first-author work on diverse video generation is accepted to CVPR 2026.</p><p>[Jan 2026] One paper was accepted to IEEE CAI.</p>
   <p>[Dec 2025] Best Intern Award for outstanding research contribution.</p>
   <p>[Dec 2025] Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization is available on arxiv.</p>
