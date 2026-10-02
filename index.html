@@ -392,16 +392,39 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 </style></head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap">
 <style>
+  /* ---- Typography ---- */
+  :root{--accent:#2f7f93;--accent-soft:rgba(47,127,147,.12)}
+  body,button,input,select,textarea,.masthead,.page__content,.author__content,.author__urls,.greedy-nav{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .page__content{line-height:1.7}
+  .page__content p{margin-bottom:1em}
+  .page__title,.author__name{font-family:'Newsreader',Georgia,serif;letter-spacing:-.01em}
+  .page__title{font-weight:600;font-size:2.1em}
+
+  /* ---- In-content section headings ---- */
+  .page__content h1{font-family:'Newsreader',Georgia,serif;font-size:1.65em;font-weight:600;margin-top:1.8em;margin-bottom:.1em;padding-bottom:.28em;border-bottom:2px solid var(--global-border-color);position:relative}
+  .page__content h1::after{content:"";position:absolute;left:0;bottom:-2px;width:52px;height:2px;background:var(--accent)}
+
+  /* ---- Sidebar / author card ---- */
+  .author__avatar img{border:3px solid var(--global-bg-color);box-shadow:0 0 0 1px var(--global-border-color),0 6px 18px rgba(0,0,0,.14);transition:transform .25s ease}
+  .author__avatar img:hover{transform:scale(1.03)}
+  .author__name{font-weight:600}
+  .author__urls li a{transition:color .15s ease}
+  .author__urls li a:hover{color:var(--global-link-color-hover)}
+
+  /* ---- Publication cards ---- */
   .publications-list{margin-top:1.5em}
-  .pub-card{position:relative;padding:1.1em 1.3em 1.15em 1.4em;margin-bottom:1.1em;border:1px solid var(--global-border-color);border-left:4px solid var(--global-link-color);border-radius:10px;background:var(--global-bg-color);transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+  .pub-card{position:relative;padding:1.1em 1.3em 1.15em 1.4em;margin-bottom:1.1em;border:1px solid var(--global-border-color);border-left:4px solid var(--accent);border-radius:10px;background:var(--global-bg-color);transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
   .pub-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.13);transform:translateY(-2px);border-left-color:var(--global-link-color-hover)}
   .pub-venue{display:inline-block;font-size:.66em;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.3em .75em;border-radius:999px;margin-bottom:.55em;color:#fff;background:var(--global-base-color)}
   .pub-venue--neurips{background:#6d48c9}
   .pub-venue--cvpr{background:#2f7f93}
   .pub-venue--workshop{background:#c2682d}
   .pub-venue--ieee{background:#4a68b3}
-  .pub-title{margin:.1em 0 .35em;font-size:1.06em;line-height:1.35;font-weight:700;color:var(--global-text-color);border-bottom:none}
+  .pub-title{margin:.1em 0 .35em;font-size:1.06em;line-height:1.35;font-weight:600;color:var(--global-text-color);border-bottom:none}
   .pub-authors{margin:0;font-size:.9em;color:var(--global-text-color);opacity:.92}
   .pub-authors strong{color:var(--global-link-color)}
   .pub-links{margin-top:.75em;display:flex;flex-wrap:wrap;gap:.5em}
@@ -410,6 +433,25 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
   .pub-btn--arxiv{background:#b31b1b}
   .pub-btn--page{background:#2a9d6d}
   .pub-btn--code{background:#333}
+
+  /* ---- Latest News timeline ---- */
+  .news-timeline{position:relative;margin:1.3em 0 .5em;padding-left:1.5em}
+  .news-timeline::before{content:"";position:absolute;left:4px;top:.5em;bottom:.5em;width:2px;background:var(--global-border-color)}
+  .news-item{position:relative;display:flex;flex-wrap:wrap;gap:.1em .8em;padding:0 0 .95em;font-size:.95em;line-height:1.5;color:var(--global-text-color)}
+  .news-item:last-child{padding-bottom:0}
+  .news-item::before{content:"";position:absolute;left:-1.5em;top:.4em;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--global-bg-color)}
+  .news-date{flex:0 0 auto;min-width:82px;font-weight:700;font-size:.8em;letter-spacing:.03em;text-transform:uppercase;color:var(--global-link-color);padding-top:.12em}
+  .news-text{flex:1 1 230px}
+
+  /* ---- Services ---- */
+  .services-list{margin-top:1.1em}
+  .services-list p{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6em;margin-bottom:.6em}
+  .svc-label{flex:0 0 auto;display:inline-block;font-size:.72em;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.28em .7em;border-radius:999px;color:var(--accent);background:var(--accent-soft)}
+
+  /* ---- Softer dark mode ---- */
+  html[data-theme="dark"]{--global-base-color:#2a2f3a;--global-bg-color:#15181e;--global-border-color:#333a46;--global-link-color:#5cc6dd;--global-link-color-hover:#8fd8e8;--global-text-color:#e6e8ec;--global-text-color-light:#9aa1ad;--accent:#5cc6dd;--accent-soft:rgba(92,198,221,.15)}
+  html[data-theme="dark"] .author__avatar img{box-shadow:0 0 0 1px var(--global-border-color),0 6px 18px rgba(0,0,0,.5)}
+  html[data-theme="dark"] .pub-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.45)}
 </style>
 <body style="padding-top: 63px; margin-bottom: 191.125px;"> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <button class="hidden" count="0"><div class="navicon"></div></button><ul class="visible-links"><li class="masthead__menu-item masthead__menu-item--lg persist"><a href="https://TahiraKazimi.github.io/">Tahira Kazimi</a></li><li class="masthead__menu-item">
   <a href="./assets/TahiraKazimi_jan_23.pdf" target="_blank">CV</a>
@@ -487,9 +529,24 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
     </div>
 
   </div>
-  <h1 id="latest-news">Latest News</h1><p>[Sep 2026] My first-author paper on physically plausible video generation is accepted to NeurIPS 2026.</p><p>[April 2026] I will be joining Apple as Machine Learning intern at Media Intelligence Team </p><p>[Feb 2026] My first-author work on diverse video generation is accepted to CVPR 2026.</p><p>[Jan 2026] One paper was accepted to IEEE CAI.</p>
-  <p>[Dec 2025] Best Intern Award for outstanding research contribution.</p>
-  <p>[Dec 2025] Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization is available on arxiv.</p>
-  <p>[Nov 2025] I presented my research at MIT as a Rising Stars fellow</p><p>[Oct 2025] Two papers accepted to ICCV'25 MMRAgI workshop.</p>
-  <p>[June 2025] I presented DiffEx at CVPR 2025 in Nashville, TN.</p><p>[Feb 2025] DiffEx is accepted to CVPR'25!</p><p>[Aug 2024] I started my PhD at Virginia Tech</p><p>[Jun 2024] I graduated from METU with high honors</p><h1 id="services">Services</h1><p>Reviewer: CVPR, AAAI</p><p>Organizer: P13N: Personalization in Generative AI Workshop </p></section><footer class="page__meta"></footer></div></article></div><div class="page__footer"><footer> <!-- start custom footer snippets --> <a href="https://TahiraKazimi.github.io/sitemap/">Sitemap</a> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons"><li><strong>Follow:</strong></li><li><a href="https://TahiraKazimi.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li></ul></div><div class="page__footer-copyright"> © 2026 Tahira Kazimi, Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br> Site last updated 2025-03-18</div></footer></div><script src="./assets/main.min.js"></script>
+  <h1 id="latest-news">Latest News</h1>
+<div class="news-timeline">
+  <div class="news-item"><span class="news-date">Sep 2026</span><span class="news-text">My first-author paper on physically plausible video generation is accepted to NeurIPS 2026.</span></div>
+  <div class="news-item"><span class="news-date">Apr 2026</span><span class="news-text">I will be joining Apple as a Machine Learning intern on the Media Intelligence Team.</span></div>
+  <div class="news-item"><span class="news-date">Feb 2026</span><span class="news-text">My first-author work on diverse video generation is accepted to CVPR 2026.</span></div>
+  <div class="news-item"><span class="news-date">Jan 2026</span><span class="news-text">One paper was accepted to IEEE CAI.</span></div>
+  <div class="news-item"><span class="news-date">Dec 2025</span><span class="news-text">Best Intern Award for outstanding research contribution.</span></div>
+  <div class="news-item"><span class="news-date">Dec 2025</span><span class="news-text">Diverse Video Generation with Determinantal Point Process-Guided Policy Optimization is available on arXiv.</span></div>
+  <div class="news-item"><span class="news-date">Nov 2025</span><span class="news-text">I presented my research at MIT as a Rising Stars fellow.</span></div>
+  <div class="news-item"><span class="news-date">Oct 2025</span><span class="news-text">Two papers accepted to the ICCV'25 MMRAgI workshop.</span></div>
+  <div class="news-item"><span class="news-date">Jun 2025</span><span class="news-text">I presented DiffEx at CVPR 2025 in Nashville, TN.</span></div>
+  <div class="news-item"><span class="news-date">Feb 2025</span><span class="news-text">DiffEx is accepted to CVPR'25!</span></div>
+  <div class="news-item"><span class="news-date">Aug 2024</span><span class="news-text">I started my PhD at Virginia Tech.</span></div>
+  <div class="news-item"><span class="news-date">Jun 2024</span><span class="news-text">I graduated from METU with high honors.</span></div>
+</div>
+<h1 id="services">Services</h1>
+<div class="services-list">
+  <p><span class="svc-label">Reviewer</span><span>CVPR, AAAI</span></p>
+  <p><span class="svc-label">Organizer</span><span>P13N: Personalization in Generative AI Workshop</span></p>
+</div></section><footer class="page__meta"></footer></div></article></div><div class="page__footer"><footer> <!-- start custom footer snippets --> <a href="https://TahiraKazimi.github.io/sitemap/">Sitemap</a> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons"><li><strong>Follow:</strong></li><li><a href="https://TahiraKazimi.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li></ul></div><div class="page__footer-copyright"> © 2026 Tahira Kazimi, Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br> Site last updated 2025-03-18</div></footer></div><script src="./assets/main.min.js"></script>
 </body></html>
