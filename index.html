@@ -448,10 +448,23 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
   .services-list p{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6em;margin-bottom:.6em}
   .svc-label{flex:0 0 auto;display:inline-block;font-size:.72em;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.28em .7em;border-radius:999px;color:var(--accent);background:var(--accent-soft)}
 
+  /* ---- Bookshelf ---- */
+  .books-intro{margin-top:.2em;font-size:.95em}
+  .books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:1.4em 1em;margin-top:1.3em}
+  .book{display:flex;flex-direction:column;text-align:center}
+  .book a{text-decoration:none !important;color:inherit;display:block}
+  .book-cover{aspect-ratio:2/3;border-radius:7px;overflow:hidden;background:var(--global-border-color);box-shadow:0 5px 16px rgba(0,0,0,.2);transition:transform .22s ease,box-shadow .22s ease}
+  .book-cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .book a:hover .book-cover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.28)}
+  .book-title{font-size:.78em;font-weight:600;line-height:1.25;margin:.6em 0 .1em;color:var(--global-text-color)}
+  .book-author{font-size:.72em;line-height:1.2;color:var(--global-text-color);opacity:.65}
+
   /* ---- Softer dark mode ---- */
   html[data-theme="dark"]{--global-base-color:#2a2f3a;--global-bg-color:#15181e;--global-border-color:#333a46;--global-link-color:#5cc6dd;--global-link-color-hover:#8fd8e8;--global-text-color:#e6e8ec;--global-text-color-light:#9aa1ad;--accent:#5cc6dd;--accent-soft:rgba(92,198,221,.15)}
   html[data-theme="dark"] .author__avatar img{box-shadow:0 0 0 1px var(--global-border-color),0 6px 18px rgba(0,0,0,.5)}
   html[data-theme="dark"] .pub-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.45)}
+  html[data-theme="dark"] .book-cover{box-shadow:0 5px 16px rgba(0,0,0,.55)}
+  html[data-theme="dark"] .book a:hover .book-cover{box-shadow:0 10px 24px rgba(0,0,0,.65)}
 </style>
 <body style="padding-top: 63px; margin-bottom: 191.125px;"> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--><div class="masthead"><div class="masthead__inner-wrap"><div class="masthead__menu"><nav id="site-nav" class="greedy-nav"> <button class="hidden" count="0"><div class="navicon"></div></button><ul class="visible-links"><li class="masthead__menu-item masthead__menu-item--lg persist"><a href="https://TahiraKazimi.github.io/">Tahira Kazimi</a></li><li class="masthead__menu-item">
   <a href="./assets/TahiraKazimi_oct_2.pdf" target="_blank">CV</a>
@@ -545,5 +558,15 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 <div class="services-list">
   <p><span class="svc-label">Reviewer</span><span>CVPR, AAAI</span></p>
   <p><span class="svc-label">Organizer</span><span>P13N: Personalization in Generative AI Workshop</span></p>
+</div>
+<h1 id="bookshelf">Bookshelf</h1>
+<p class="books-intro">A handful of all-time favorites. Find the rest on my <a href="https://www.goodreads.com/user/show/83807002-tahira" target="_blank" rel="noopener">Goodreads</a>.</p>
+<div class="books-grid">
+  <div class="book"><a href="https://www.goodreads.com/search?q=East+of+Eden+John+Steinbeck" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/east-of-eden.jpg" alt="East of Eden by John Steinbeck" loading="lazy"></div><div class="book-title">East of Eden</div><div class="book-author">John Steinbeck</div></a></div>
+  <div class="book"><a href="https://www.goodreads.com/search?q=The+Sword+of+Kaigen+M.+L.+Wang" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/sword-of-kaigen.jpg" alt="The Sword of Kaigen by M. L. Wang" loading="lazy"></div><div class="book-title">The Sword of Kaigen</div><div class="book-author">M. L. Wang</div></a></div>
+  <div class="book"><a href="https://www.goodreads.com/search?q=The+Remains+of+the+Day+Kazuo+Ishiguro" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/remains-of-the-day.jpg" alt="The Remains of the Day by Kazuo Ishiguro" loading="lazy"></div><div class="book-title">The Remains of the Day</div><div class="book-author">Kazuo Ishiguro</div></a></div>
+  <div class="book"><a href="https://www.goodreads.com/search?q=The+Hitchhiker%27s+Guide+to+the+Galaxy+Douglas+Adams" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/hitchhikers-guide.jpg" alt="The Hitchhiker's Guide to the Galaxy by Douglas Adams" loading="lazy"></div><div class="book-title">The Hitchhiker's Guide to the Galaxy</div><div class="book-author">Douglas Adams</div></a></div>
+  <div class="book"><a href="https://www.goodreads.com/search?q=Assassin%27s+Apprentice+Robin+Hobb" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/farseer.jpg" alt="The Farseer Trilogy by Robin Hobb" loading="lazy"></div><div class="book-title">The Farseer Trilogy</div><div class="book-author">Robin Hobb</div></a></div>
+  <div class="book"><a href="https://www.goodreads.com/search?q=1984+George+Orwell" target="_blank" rel="noopener"><div class="book-cover"><img src="./assets/books/1984.jpg" alt="1984 by George Orwell" loading="lazy"></div><div class="book-title">1984</div><div class="book-author">George Orwell</div></a></div>
 </div></section><footer class="page__meta"></footer></div></article></div><div class="page__footer"><footer> <!-- start custom footer snippets --> <a href="https://TahiraKazimi.github.io/sitemap/">Sitemap</a> <!-- end custom footer snippets --><div class="page__footer-follow"><ul class="social-icons"><li><strong>Follow:</strong></li><li><a href="https://TahiraKazimi.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li></ul></div><div class="page__footer-copyright"> © 2026 Tahira Kazimi, Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br> Site last updated 2025-03-18</div></footer></div><script src="./assets/main.min.js"></script>
 </body></html>
